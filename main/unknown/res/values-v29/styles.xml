@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="@style/LightTheme">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:enforceNavigationBarContrast">false</item>
+    </style>
+    <style name="Base.Material3.Dark.Rikka" parent="@style/Base.V29.Material3.Dark.Rikka" />
+    <style name="Base.Material3.Light.Rikka" parent="@style/Base.V29.Material3.Light.Rikka" />
+    <style name="Base.V29.Material3.Dark.Rikka" parent="@style/Base.V28.Material3.Dark.Rikka">
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+    <style name="Base.V29.Material3.Light.Rikka" parent="@style/Base.V28.Material3.Light.Rikka">
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+</resources>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:id="@id/home"
+    android:background="@color/background"
+    android:focusableInTouchMode="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:transitionName="whereTo"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@id/header"
+        android:background="@color/activity_header"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/activity_header_height">
+        <LinearLayout
+            android:id="@id/back"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:layout_marginStart="20.0dip">
+            <ImageView
+                android:id="@id/arrow"
+                android:padding="5.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_back" />
+        </LinearLayout>
+        <TextView
+            android:textSize="@dimen/header_text"
+            android:textStyle="bold"
+            android:textColor="@color/uicolor_text_high"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10.0dip"
+            android:text="@string/search_name"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20.0dip" />
+        <View
+            android:background="@color/divider"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <EditText
+        android:textSize="16.0sp"
+        android:id="@id/origin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20.0dip"
+        android:hint="@string/origin"
+        android:layout_below="@id/header"
+        android:inputType="text"
+        android:imeOptions="actionSearch"
+        android:drawableStart="@drawable/source_marker"
+        android:layout_marginStart="20.0dip"
+        android:layout_marginEnd="20.0dip"
+        style="@style/uisearchview" />
+    <EditText
+        android:textSize="16.0sp"
+        android:id="@id/destination"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11.0dip"
+        android:hint="@string/destination"
+        android:layout_below="@id/origin"
+        android:inputType="text"
+        android:imeOptions="actionSearch"
+        android:drawableStart="@drawable/dest_marker"
+        android:layout_marginStart="20.0dip"
+        android:layout_marginEnd="20.0dip"
+        style="@style/uisearchview" />
+    <RelativeLayout
+        android:id="@id/select_on_map"
+        android:paddingTop="10.0dip"
+        android:paddingBottom="10.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:foreground="@drawable/material_ripple"
+        android:layout_below="@id/destination"
+        android:layout_marginStart="20.0dip"
+        android:layout_marginEnd="20.0dip">
+        <ImageView
+            android:id="@id/set_on_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_location"
+            android:layout_alignParentLeft="true" />
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="@color/uicolor_text_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_on_map"
+            android:layout_marginStart="10.0dip"
+            android:layout_toEndOf="@id/set_on_map" />
+    </RelativeLayout>
+    <ListView
+        android:id="@id/addresses"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="10.0dip"
+        android:layout_above="@id/next_action"
+        android:layout_below="@id/select_on_map" />
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/next_action"
+        android:layout_centerHorizontal="true"
+        layout="@layout/transport_view" />
+    <com.google.android.material.button.MaterialButton
+        android:textSize="16.0sp"
+        android:textColor="@color/material_button_text_color"
+        android:id="@id/next_action"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12.0dip"
+        android:text="@string/continue_text"
+        android:layout_alignParentBottom="true"
+        android:textAllCaps="false"
+        android:layout_marginStart="12.0dip"
+        android:layout_marginEnd="12.0dip"
+        app:backgroundTint="@color/primaryColor" />
+</RelativeLayout>

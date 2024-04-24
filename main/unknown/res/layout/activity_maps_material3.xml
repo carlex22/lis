@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    android:orientation="vertical"
+    android:id="@id/drawer"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            layout="@layout/maps_fragment" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@id/getlocation_container"
+            android:layout_width="45.0dip"
+            android:layout_height="45.0dip"
+            android:layout_centerVertical="true"
+            android:insetLeft="0.0dip"
+            android:insetRight="0.0dip"
+            android:insetTop="0.0dip"
+            android:insetBottom="0.0dip"
+            android:alpha="0.95"
+            android:rotation="30.0"
+            android:layout_marginStart="8.0dip"
+            android:layout_marginEnd="8.0dip"
+            android:layout_alignParentEnd="true"
+            android:elevation="10.0dip"
+            app:backgroundTint="@color/background"
+            app:icon="@drawable/ic_navigation_black_24dp"
+            app:iconGravity="textStart"
+            app:iconPadding="0.0dip"
+            app:iconSize="24.0dip"
+            style="@style/Widget.Material3.Button.TonalButton" />
+        <include
+            android:id="@id/joystick_mode_message"
+            android:visibility="gone"
+            layout="@layout/joystick_message" />
+        <ImageView
+            android:id="@id/settings"
+            android:padding="8.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_menu"
+            android:paddingStart="18.0dip"
+            android:paddingEnd="18.0dip" />
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@id/route_building_status_container"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@id/coordinator"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent">
+        <include
+            layout="@layout/bottom_sheet" />
+        <TextView
+            android:textSize="@dimen/osm_copyright_text_size"
+            android:textColor="@color/uicolor_text_medium"
+            android:id="@id/copyright_txt"
+            android:paddingBottom="36.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/copyright"
+            android:paddingStart="18.0dip"
+            android:paddingEnd="18.0dip"
+            app:layout_anchor="@id/bottom_sheet" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:layout_gravity="start"
+        android:id="@id/navigation_header_container"
+        android:background="@color/background"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        app:headerLayout="@layout/drawerlayout_header"
+        app:itemIconTint="#ff8b8b8b"
+        app:itemTextColor="#ff666666"
+        app:menu="@menu/drawermenu" />
+</androidx.drawerlayout.widget.DrawerLayout>

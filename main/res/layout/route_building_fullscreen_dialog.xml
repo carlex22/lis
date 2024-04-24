@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@id/loading"
+    android:background="@color/app_system_bars"
+    android:visibility="visible"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar
+        android:id="@id/progress_circular"
+        android:layout_width="50.0dip"
+        android:layout_height="50.0dip"
+        android:layout_above="@id/cancel"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/primaryColor"
+        android:outlineSpotShadowColor="@color/uicolor" />
+    <com.google.android.material.button.MaterialButton
+        android:textColor="@color/uicolor"
+        android:id="@id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15.0dip"
+        android:text="@string/cancel"
+        android:layout_centerInParent="true"
+        android:backgroundTint="@color/red_tonal_button"
+        style="@style/ThemeOverlay.Material3.Button.ElevatedButton" />
+</RelativeLayout>

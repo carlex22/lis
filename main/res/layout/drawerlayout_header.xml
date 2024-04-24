@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@id/logo"
+        android:layout_width="24.0dip"
+        android:layout_height="24.0dip"
+        android:src="@mipmap/ic_launcher"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10.0dip" />
+    <TextView
+        android:textStyle="bold"
+        android:textColor="@color/uicolor_text_high"
+        android:id="@id/header_appname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:layout_marginBottom="10.0dip"
+        android:text="Listick Fake GPS"
+        android:layout_marginStart="5.0dip"
+        android:layout_toEndOf="@id/logo" />
+    <View
+        android:background="@color/divider"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_below="@id/header_appname" />
+</RelativeLayout>

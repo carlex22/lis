@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:icon="@drawable/ic_settings_24dp"
+        android:id="@id/settings"
+        android:title="@string/settings" />
+    <item
+        android:icon="@drawable/ic_share_black_24dp"
+        android:id="@id/share_location"
+        android:title="@string/share" />
+    <item
+        android:icon="@drawable/ic_keyboard_return_black_24dp"
+        android:id="@id/go_to_coordinates"
+        android:title="@string/go_to_coordinates" />
+    <item
+        android:icon="@drawable/ic_telegram_24dp"
+        android:id="@id/our_telegram"
+        android:title="@string/our_telegram" />
+    <item
+        android:icon="@drawable/ic_star_black_24dp"
+        android:id="@id/rate_app"
+        android:title="@string/rate_app" />
+    <item
+        android:icon="@drawable/ic_info_outline"
+        android:id="@id/about"
+        android:title="@string/about_of_the_app" />
+</menu>

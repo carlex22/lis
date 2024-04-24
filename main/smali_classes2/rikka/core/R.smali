@@ -1,0 +1,24 @@
+.class public final Lrikka/core/R;
+.super Ljava/lang/Object;
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lrikka/core/R$anim;,
+        Lrikka/core/R$array;,
+        Lrikka/core/R$string;,
+        Lrikka/core/R$style;,
+        Lrikka/core/R$styleable;
+    }
+.end annotation
+
+
+# direct methods
+.method private constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method

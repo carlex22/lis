@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="@style/LightTheme">
+        <item name="android:statusBarColor">@color/app_system_bars</item>
+        <item name="android:navigationBarColor">@color/app_system_bars</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+    <style name="Base.Material3.Dark.Rikka" parent="@style/Base.V27.Material3.Dark.Rikka" />
+    <style name="Base.Material3.Light.Rikka" parent="@style/Base.V27.Material3.Light.Rikka" />
+    <style name="E2ETheme" parent="@style/AppTheme">
+        <item name="android:statusBarColor">@color/app_system_bars</item>
+        <item name="android:navigationBarColor">@color/app_system_bars</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+    <style name="E2ETransparentTheme" parent="@style/AppTheme">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+    <style name="Base.V27.Material3.Dark.Rikka" parent="@style/Base.V23.Material3.Dark.Rikka">
+        <item name="android:navigationBarColor">?android:colorBackground</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+    <style name="Base.V27.Material3.Light.Rikka" parent="@style/Base.V23.Material3.Light.Rikka">
+        <item name="android:navigationBarColor">?android:colorBackground</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+</resources>

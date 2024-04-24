@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <item
+        android:drawable="@drawable/$selectable_item_background_rounded_corner_with_padding__0"
+        android:left="4.0dip"
+        android:top="2.0dip"
+        android:right="4.0dip"
+        android:bottom="2.0dip" />
+</layer-list>

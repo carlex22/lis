@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:focusableInTouchMode="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@id/header"
+        android:background="@color/activity_header"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/activity_header_height">
+        <LinearLayout
+            android:id="@id/back"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:layout_marginStart="20.0dip">
+            <ImageView
+                android:id="@id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_back" />
+            <TextView
+                android:textColor="@color/uicolor_text_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3.0dip"
+                android:text="@string/back" />
+        </LinearLayout>
+        <TextView
+            android:textSize="@dimen/header_text"
+            android:textStyle="bold"
+            android:textColor="@color/uicolor_text_high"
+            android:id="@id/bookmarks_header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10.0dip"
+            android:text="@string/boookmarks"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20.0dip" />
+        <TextView
+            android:id="@id/bookmarks_tab"
+            android:padding="5.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/route_spoof"
+            android:layout_alignBottom="@id/bookmarks_header_text"
+            android:layout_toEndOf="@id/bookmarks_header_text" />
+        <View
+            android:background="@color/divider"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <TextView
+        android:id="@id/blank"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nothing_to_view"
+        android:layout_centerInParent="true" />
+    <ListView
+        android:id="@id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/navigation"
+        android:layout_below="@id/header" />
+    <View
+        android:background="@color/divider"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_above="@id/navigation" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@id/navigation"
+        android:background="@color/activity_header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="@color/uicolor"
+        app:itemTextColor="@color/uicolor_text_medium"
+        app:menu="@menu/bookmarks_bottom" />
+</RelativeLayout>
